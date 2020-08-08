@@ -76,16 +76,17 @@ const caculateGameResult = (matchScore) => {
 };
 
 const caculateSetResult = (gameScore) => {
-  if (gameScore[0] > 12) {
+  const winSetGameScore = 12;
+  if (gameScore[0] > winSetGameScore) {
     return [2, 1];
   }
-  if (gameScore[0] === 12) {
+  if (gameScore[0] === winSetGameScore) {
     return [2, 0];
   }
-  if (gameScore[1] > 12) {
+  if (gameScore[1] > winSetGameScore) {
     return [1, 2];
   }
-  if ([gameScore[1]] === 12) {
+  if (gameScore[1] === winSetGameScore) {
     return [0, 2];
   }
 };
@@ -95,12 +96,10 @@ const printMatchResult = (matchScore, setScore) => {
   const firstPlayerName = playersName[0];
   const secondPlayerName = playersName[1];
   if (setScore[0] === 2) {
-    console.log("-----------------------");
     console.log(firstPlayerName + " defeated " + secondPlayerName);
     console.log(setScore[0] + " sets to " + setScore[1]);
     console.log("-----------------------");
   } else {
-    console.log("-----------------------");
     console.log(secondPlayerName + " defeated " + firstPlayerName);
     console.log(setScore[1] + " sets to " + setScore[0]);
     console.log("-----------------------");
@@ -113,4 +112,7 @@ module.exports = {
   caculateGameResult,
   caculateSetResult,
   printMatchResult,
+  scoreDataIsValid,
+  countPointScore,
+  playerWinOneGame,
 };

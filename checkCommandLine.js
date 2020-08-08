@@ -6,7 +6,6 @@ const checkCommandLineIsValid = (commandArgs, allMatchScore) => {
     checkMatchIdIsValid(commandArgs[0], allMatchScore) &&
     checkPlayerNameIsValid(commandArgs[1], allMatchScore)
   ) {
-    console.log("success");
     return true;
   }
   return false;
@@ -32,15 +31,7 @@ const getAllPlayersName = (allMatchScore) => {
 
 const checkCommandArgNum = (commandArgs) => {
   if (commandArgs.length != 2) {
-    console.log(
-      "---------------------------------\n",
-      "Please enter the correct command:\n",
-      "node tennis-match-caculator.js  [MatchID]  [Player Name]\n",
-      "---------------------------------\n",
-      "For example:\n",
-      'node tennis-match-caculator.js 02 "Person A"\n',
-      "---------------------------------\n"
-    );
+    printCommandLineFormatNotValid();
     return false;
   }
   return true;
@@ -53,11 +44,7 @@ const checkMatchIdIsValid = (matchId, allMatchScore) => {
       return true;
     }
   }
-  console.log(
-    "There is no match " + matchId + " ,\n",
-    "Valid match Id are " + allMatchId + "\n",
-    "Please run the command again."
-  );
+  printCommandLineMatchIdNotValid(matchId, allMatchId);
   return false;
 };
 
@@ -68,14 +55,45 @@ const checkPlayerNameIsValid = (playerName, allMatchScore) => {
       return true;
     }
   }
+  printCommandLinePlayerNameNotValid(playerName, allPlayerName);
+  return false;
+};
+
+const printCommandLineFormatNotValid = () => {
+  console.log(
+    "Please enter the correct command:\n",
+    "node tennis-match-caculator.js  [MatchID]  [Player Name]\n",
+    "---------------------------------\n",
+    "For example:\n",
+    'node tennis-match-caculator.js 02 "Person A"\n',
+    "---------------------------------\n"
+  );
+};
+
+const printCommandLineMatchIdNotValid = (matchId, allMatchId) => {
+  console.log(
+    "There is no match " + matchId + " ,\n",
+    "Valid match Id are " + allMatchId + "\n",
+    "Please run the command again."
+  );
+};
+
+const printCommandLinePlayerNameNotValid = (playerName, allPlayerName) => {
   console.log(
     "There is no player " + playerName + " ,\n",
     "Valid player name are " + allPlayerName + "\n",
     "Please run the command again."
   );
-  return false;
 };
 
 module.exports = {
   checkCommandLineIsValid,
+  getAllMatchId,
+  getAllPlayersName,
+  checkCommandArgNum,
+  checkMatchIdIsValid,
+  checkPlayerNameIsValid,
+  printCommandLineFormatNotValid,
+  printCommandLineMatchIdNotValid,
+  printCommandLinePlayerNameNotValid,
 };

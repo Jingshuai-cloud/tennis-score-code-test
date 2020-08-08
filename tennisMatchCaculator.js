@@ -5,7 +5,10 @@ const {
   caculateSetResult,
   printMatchResult,
 } = require("./caculateMatchResult");
-const { getOneSpecificPlayerScore } = require("./caculatePlayerScore");
+const {
+  getOneSpecificPlayerScore,
+  printOneSpecificPlayerScore,
+} = require("./caculatePlayerScore");
 const { checkCommandLineIsValid } = require("./checkCommandLine");
 
 //read file data
@@ -19,7 +22,9 @@ const printMatchResultAndPlayerScore = (commandArgs, allMatchScore) => {
   if (checkCommandLineIsValid(commandArgs, allMatchScore)) {
     printOneMatchResult(allMatchScore, commandArgs[0]);
     printOnePlayerScore(allMatchScore, commandArgs[1]);
+    return true;
   }
+  return false;
 };
 
 const printOneMatchResult = (allMatchScore, matchId) => {
@@ -30,7 +35,14 @@ const printOneMatchResult = (allMatchScore, matchId) => {
 };
 
 const printOnePlayerScore = (allMatchScore, inputPlayer) => {
-  getOneSpecificPlayerScore(allMatchScore, inputPlayer);
+  const playerScore = getOneSpecificPlayerScore(allMatchScore, inputPlayer);
+  printOneSpecificPlayerScore(playerScore);
 };
 
 printMatchResultAndPlayerScore(commandArgs, allMatchScore);
+
+module.exports = {
+  printMatchResultAndPlayerScore,
+  printOneMatchResult,
+  printOnePlayerScore,
+};

@@ -44,13 +44,24 @@ const getOneSpecificPlayerScore = (matchArray, inputPlayer) => {
       ? ((winPoint += result.success), (losePoint += result.failed))
       : null
   );
+
+  return [winPoint, losePoint, inputPlayer];
+};
+
+const printOneSpecificPlayerScore = (playerScore) => {
+  const winPoint = playerScore[0];
+  const losePoint = playerScore[1];
+  const inputPlayer = playerScore[2];
+
   console.log(
     inputPlayer + "  Score  " + "[ " + winPoint + "," + losePoint + " ]"
   );
   console.log("-----------------------");
-  return [winPoint, losePoint];
 };
 
 module.exports = {
   getOneSpecificPlayerScore,
+  recordTwoPlayersScoreForOneMatch,
+  getAllPlayerScore,
+  printOneSpecificPlayerScore,
 };
