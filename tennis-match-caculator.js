@@ -12,11 +12,7 @@ const { checkCommandLineIsValid } = require("./checkCommandLine");
 const scoreFile = "./full_tournament.txt";
 const allMatchScore = readMatchScoreToArray(scoreFile);
 
-//run node tennis-match-caculator.js 02 "Person A"
-// const commandArgs = process.argv.slice(2);
-// printOneMatchResult(allMatchScore, commandArgs[0]);
-// printOnePlayerScore(allMatchScore, commandArgs[1]);
-
+//read command line
 const commandArgs = process.argv.slice(2);
 
 const printMatchResultAndPlayerScore = (commandArgs, allMatchScore) => {
