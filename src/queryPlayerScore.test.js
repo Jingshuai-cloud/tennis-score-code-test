@@ -3,7 +3,7 @@ const {
   getAllPlayerScore,
   getOneSpecificPlayerScore,
   printOneSpecificPlayerScore,
-} = require("./caculatePlayerScore");
+} = require("./queryPlayerScore");
 
 const testMatchArray = [
   [

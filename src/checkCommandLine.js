@@ -1,4 +1,4 @@
-const { getTwoMatchPlayerName } = require("./caculateMatchResult");
+const { getTwoMatchPlayerName } = require("./queryMatchResult");
 
 const checkCommandLineIsValid = (commandArgs, allMatchScore) => {
   if (
@@ -62,10 +62,10 @@ const checkPlayerNameIsValid = (playerName, allMatchScore) => {
 const printCommandLineFormatNotValid = () => {
   console.log(
     "Please enter the correct command:\n",
-    "node tennis-match-caculator.js  [MatchID]  [Player Name]\n",
+    "yarn tennis-caculator  [MatchID]  [Player Name]\n",
     "---------------------------------\n",
     "For example:\n",
-    'node tennis-match-caculator.js 02 "Person A"\n',
+    'yarn tennis-caculator 02 "Person A"\n',
     "---------------------------------\n"
   );
 };

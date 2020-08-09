@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "tennis-caculator": "node src/index.js"
   },
   "devDependencies": {
     "jest": "^26.2.2"

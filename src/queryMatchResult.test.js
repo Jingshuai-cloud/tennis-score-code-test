@@ -7,7 +7,7 @@ const {
   caculateGameResult,
   caculateSetResult,
   printMatchResult,
-} = require("./caculateMatchResult");
+} = require("./queryMatchResult");
 
 const testMatchArray = [
   [

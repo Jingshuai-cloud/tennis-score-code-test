@@ -87,10 +87,10 @@ it("print the correct command line format", () => {
   printCommandLineFormatNotValid();
   expect(console.log).toHaveBeenCalledWith(
     "Please enter the correct command:\n",
-    "node tennis-match-caculator.js  [MatchID]  [Player Name]\n",
+    "yarn tennis-caculator  [MatchID]  [Player Name]\n",
     "---------------------------------\n",
     "For example:\n",
-    'node tennis-match-caculator.js 02 "Person A"\n',
+    'yarn tennis-caculator 02 "Person A"\n',
     "---------------------------------\n"
   );
 });

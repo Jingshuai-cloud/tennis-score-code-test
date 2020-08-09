@@ -2,7 +2,7 @@ const {
   printMatchResultAndPlayerScore,
   printOneMatchResult,
   printOnePlayerScore,
-} = require("./tennisMatchCaculator");
+} = require("./index");
 const { readMatchScoreToArray } = require("./readScoreFile");
 
 const scoreFile = "./full_tournament.txt";

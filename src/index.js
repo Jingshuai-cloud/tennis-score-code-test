@@ -4,11 +4,11 @@ const {
   caculateGameResult,
   caculateSetResult,
   printMatchResult,
-} = require("./caculateMatchResult");
+} = require("./queryMatchResult");
 const {
   getOneSpecificPlayerScore,
   printOneSpecificPlayerScore,
-} = require("./caculatePlayerScore");
+} = require("./queryPlayerScore");
 const { checkCommandLineIsValid } = require("./checkCommandLine");
 
 //read file data

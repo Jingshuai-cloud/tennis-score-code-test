@@ -1,7 +1,7 @@
 const {
   getTwoMatchPlayerName,
   caculateGameResult,
-} = require("./caculateMatchResult");
+} = require("./queryMatchResult");
 
 const recordTwoPlayersScoreForOneMatch = (matchScore) => {
   const twoPlayersName = getTwoMatchPlayerName(matchScore);
