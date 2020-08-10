@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1596940175097" clover="3.2.0">
-  <project timestamp="1596940175097" name="All files">
+<coverage generated="1596949446255" clover="3.2.0">
+  <project timestamp="1596949446256" name="All files">
     <metrics statements="179" coveredstatements="179" conditionals="35" coveredconditionals="33" methods="26" coveredmethods="26" elements="240" coveredelements="238" complexity="0" loc="179" ncloc="179" packages="1" files="5" classes="5"/>
     <file name="checkCommandLine.js" path="/Users/aileen/Desktop/tennis_calculator_app/src/checkCommandLine.js">
       <metrics statements="43" coveredstatements="43" conditionals="11" coveredconditionals="11" methods="9" coveredmethods="9"/>
