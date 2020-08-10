@@ -108,10 +108,11 @@ For Example: yarn tennis-caculator 01 "Person D"
  # Test-case
  
  Write 30 test case all together:
+ ![](images/testCases.png)
  
  
  Test coverage:
- 
+ ![](images/testCoverage.png)
  
 
 
